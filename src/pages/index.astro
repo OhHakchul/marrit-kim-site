@@ -5,75 +5,106 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Your Site Title</title>
+    <title>Marrit Kim van der Staaij | 김여름</title>
   </head>
-  <body class="bg-[#fafafa] text-gray-800 font-sans antialiased">
+  <body class="bg-[#fafafa] text-gray-800 font-sans antialiased overflow-x-hidden">
     
-    <main class="max-w-3xl mx-auto px-6 py-16 flex flex-col items-center text-center">
+    <header class="relative w-full h-screen flex items-center justify-center">
+      <img src="/images/hero-bg.jpg" alt="House and Trees" class="absolute inset-0 w-full h-full object-cover z-0" />
+      <div class="absolute inset-0 bg-black/40 z-10"></div>
       
-      <div class="w-40 h-40 rounded-full shadow-md mb-6 z-10 bg-gray-200 border-4 border-white flex items-center justify-center text-gray-400 font-bold">
-        [Profile Image]
+      <div class="relative z-20 text-center text-white px-6">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-widest mb-4 drop-shadow-lg">
+          MARRIT KIM VAN DER STAAIJ
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-light tracking-widest mb-6 drop-shadow-md">
+          김여름
+        </h2>
+        <p class="text-lg md:text-xl font-medium tracking-wide border-t border-white/50 pt-4 inline-block">
+          Researcher . Writer . Advocate
+        </p>
       </div>
       
-      <h1 class="text-2xl md:text-3xl font-bold tracking-[0.2em] uppercase mb-4 text-gray-900">
-        Main Headline . Keyword . Keyword
-      </h1>
-      
-      <p class="text-lg text-gray-600 mb-16 max-w-xl z-10 bg-[#fafafa] px-4">
-        Your introductory paragraph goes here. This is a placeholder for a brief overview of the website's purpose or a short personal bio.
-      </p>
+      <div class="absolute bottom-10 z-20 animate-bounce">
+        <span class="text-white text-sm uppercase tracking-widest">Scroll</span>
+      </div>
+    </header>
 
-      <div class="relative w-full flex flex-col items-center">
+    <main class="max-w-4xl mx-auto px-6 py-24 flex flex-col gap-32">
+      
+      <section class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="w-full md:w-1/2">
+          <img src="/images/marrit-portrait.jpg" alt="Marrit Kim" class="rounded-xl shadow-lg w-full object-cover aspect-[4/5]" />
+        </div>
+        <div class="w-full md:w-1/2">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900 border-b-2 border-gray-200 pb-2 inline-block">About</h2>
+          <p class="text-lg leading-relaxed text-gray-700 mb-4">
+            Marrit Kim van der Staaij / 김여름 is a Dutch-Korean researcher and writer based in Seoul, South Korea. With her background as a chemical analyst and biomedical researcher, she looks at the world with the questions: "How does this work?" and "How can I contribute to this?"
+          </p>
+          <p class="text-lg leading-relaxed text-gray-700 mb-4">
+            Currently, she is writing a book about her journey as a Descendant of a Korean Adoptee (DoKAD), exploring the intergenerational impact of adoption, identity, and belonging.
+          </p>
+          <p class="text-lg leading-relaxed text-gray-700">
+            Through writing, advocacy, and research, she aims to contribute to greater recognition of adoptees and their descendants, opening space for accountability, community, and healing.
+          </p>
+        </div>
+      </section>
+
+      <section class="flex flex-col-reverse md:flex-row gap-12 items-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+        <div class="w-full md:w-1/2">
+          <h2 class="text-sm font-bold tracking-widest text-gray-400 uppercase mb-2">Upcoming Book</h2>
+          <h3 class="text-3xl font-bold mb-4 text-gray-900 leading-tight">Traces of Freckles</h3>
+          <p class="text-xl italic text-gray-600 mb-6">"Back to the country that found my mother abandoned."</p>
+          <p class="text-lg leading-relaxed text-gray-700">
+            An exploration of the intergenerational impact of adoption, identity, and belonging through the lens of a Descendant of a Korean Adoptee.
+          </p>
+        </div>
+        <div class="w-full md:w-1/2">
+          <img src="/images/book-cover.jpg" alt="Traces of Freckles" class="rounded-lg shadow-md w-full" />
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-bold mb-10 text-gray-900 text-center">Projects & Advocacy</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <a href="https://dokadarchive.wordpress.com/dokadstories/" target="_blank" class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 text-center group">
+            <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">Dokadstories</h3>
+            <p class="text-gray-600">Archiving and sharing the stories of descendants of Korean adoptees.</p>
+          </a>
+
+          <a href="https://www.facebook.com/groups/777706757533831/" target="_blank" class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 text-center group">
+            <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">DoKAD Facebook</h3>
+            <p class="text-gray-600">A dedicated community group for DoKAD members to connect and share.</p>
+          </a>
+
+          <a href="https://dokadarchive.wordpress.com/dokadarchive/information/f-4-12-visa-for-dokads/" target="_blank" class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 text-center group">
+            <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">F-4 Visa Guidelines</h3>
+            <p class="text-gray-600">Helpful resources and guidelines for navigating the F-4 visa process.</p>
+          </a>
+
+        </div>
+      </section>
+
+      <section class="mb-20">
+        <h2 class="text-3xl font-bold mb-10 text-gray-900 text-center">Media & Panels</h2>
         
-        <div class="absolute top-0 bottom-0 w-[2px] bg-gray-300 z-0"></div>
-
-        <div class="relative z-10 flex flex-col items-center mb-24 w-full">
-          <div class="w-5 h-5 rounded-full bg-gray-800 border-4 border-[#fafafa] mb-6"></div>
-          
-          <div class="bg-white p-5 rounded-2xl shadow-lg w-full max-w-lg transition-transform duration-300 hover:-translate-y-2 text-left">
-            <div class="bg-gray-100 rounded-xl w-full h-64 mb-5 flex items-center justify-center text-gray-400">
-              [Image Placeholder 1]
-            </div>
-            <h2 class="text-2xl font-bold mb-3 text-gray-900">Section Title 1</h2>
-            <p class="text-gray-600 mb-4 leading-relaxed">Description for your first major section goes here. Keep it concise and visually balanced.</p>
-            <a href="#" class="inline-block text-gray-800 font-bold border-b-2 border-transparent hover:border-gray-800 transition-colors pb-1">Link Text →</a>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <img src="/images/panel-dokad.png" alt="DoKAD Panel 2024" class="rounded-xl shadow-md w-full hover:scale-[1.02] transition-transform" />
+          <img src="/images/panel-mosaic.png" alt="Adoption Mosaic Panel Talk" class="rounded-xl shadow-md w-full hover:scale-[1.02] transition-transform" />
         </div>
 
-        <div class="relative z-10 flex flex-col items-center mb-24 w-full">
-          <div class="w-5 h-5 rounded-full bg-gray-800 border-4 border-[#fafafa] mb-6"></div>
-          
-          <div class="bg-white p-5 rounded-2xl shadow-lg w-full max-w-lg transition-transform duration-300 hover:-translate-y-2 text-left">
-            <div class="bg-gray-100 rounded-xl w-full h-64 mb-5 flex items-center justify-center text-gray-400">
-              [Image Placeholder 2]
-            </div>
-            <h2 class="text-2xl font-bold mb-3 text-gray-900">Section Title 2</h2>
-            <p class="text-gray-600 mb-4 leading-relaxed">Description for your second major section goes here. This follows the vertical flow down the page.</p>
-            <a href="#" class="inline-block text-gray-800 font-bold border-b-2 border-transparent hover:border-gray-800 transition-colors pb-1">Link Text →</a>
-          </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+          <h3 class="text-xl font-bold mb-6 text-gray-900">Featured In</h3>
+          <ul class="space-y-4">
+            <li><a href="https://n.news.naver.com/article/003/0013233535" target="_blank" class="text-lg text-gray-700 hover:text-blue-600 border-b border-gray-300 hover:border-blue-600 transition-colors">Naver News Feature</a></li>
+            <li><a href="https://imnews.imbc.com/replay/straight/6710717_28993.html" target="_blank" class="text-lg text-gray-700 hover:text-blue-600 border-b border-gray-300 hover:border-blue-600 transition-colors">MBC Straight Interview</a></li>
+            <li><a href="https://www.youtube.com/watch?v=2zMyG2Z9a10&list=PLqQRuDoz8nbp_KA_pSsGyFjyFezHAEPPO&index=8" target="_blank" class="text-lg text-gray-700 hover:text-blue-600 border-b border-gray-300 hover:border-blue-600 transition-colors">YouTube Panel Discussion</a></li>
+            <li><a href="https://www.kmaeilsinbo.kr/news/articleView.html?idxno=358128" target="_blank" class="text-lg text-gray-700 hover:text-blue-600 border-b border-gray-300 hover:border-blue-600 transition-colors">Korea Maeil Shinbo Article</a></li>
+            <li><a href="https://frieschdagblad.nl/regio/Marrits-moeizame-zoektocht-naar-waar-haar-wortels-liggen-..." target="_blank" class="text-lg text-gray-700 hover:text-blue-600 border-b border-gray-300 hover:border-blue-600 transition-colors">Friesch Dagblad (Dutch News)</a></li>
+          </ul>
         </div>
-
-        <div class="relative z-10 flex flex-col items-center mb-12 w-full">
-          <div class="w-5 h-5 rounded-full bg-gray-800 border-4 border-[#fafafa] mb-6"></div>
-          
-          <div class="bg-white p-5 rounded-2xl shadow-lg w-full max-w-lg transition-transform duration-300 hover:-translate-y-2 text-left">
-            <div class="bg-gray-100 rounded-xl w-full h-64 mb-5 flex items-center justify-center text-gray-400">
-              [Image Placeholder 3]
-            </div>
-            <h2 class="text-2xl font-bold mb-3 text-gray-900">Section Title 3</h2>
-            <p class="text-gray-600 mb-4 leading-relaxed">Description for your third major section goes here. The timeline anchors to this final card.</p>
-            <a href="#" class="inline-block text-gray-800 font-bold border-b-2 border-transparent hover:border-gray-800 transition-colors pb-1">Link Text →</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="mt-12 z-10 bg-[#fafafa] px-8 py-8 w-full border-t border-gray-200">
-        <h2 class="text-3xl font-bold mb-8 text-gray-900">Footer Headline</h2>
-        <a href="#" class="inline-block bg-gray-900 text-white px-10 py-4 rounded-full font-bold tracking-wide hover:bg-gray-700 transition-colors shadow-md">
-          Action Button
-        </a>
-      </div>
+      </section>
 
     </main>
   </body>
