@@ -90,11 +90,17 @@
 
 <style>
   /* --- GLOBAL VARIABLES & RESET --- */
+  /* --- GLOBAL VARIABLES & RESET --- */
   :root {
-    --bg-color: #fafafa;
+    --bg-color: #fdfbf7; /* A warm, creamy paper-like white */
     --text-main: #222;
     --text-light: #444;
     --accent: #000;
+    
+    /* Freckle Colors (Soft, semi-transparent warm browns) */
+    --freckle-1: rgba(160, 82, 45, 0.15); 
+    --freckle-2: rgba(139, 69, 19, 0.1);  
+    --freckle-3: rgba(205, 133, 63, 0.12); 
   }
   
   * {
@@ -109,6 +115,14 @@
     color: var(--text-main);
     line-height: 1.7;
     overflow-x: hidden;
+    
+    /* The Freckle Pattern */
+    background-image: 
+      radial-gradient(circle, var(--freckle-1) 1px, transparent 1.5px),
+      radial-gradient(circle, var(--freckle-2) 1.5px, transparent 2px),
+      radial-gradient(circle, var(--freckle-3) 1px, transparent 1.5px);
+    background-size: 35px 35px, 55px 55px, 85px 85px;
+    background-position: 0 0, 15px 25px, 45px 65px;
   }
 
   /* --- HERO SECTION --- */
