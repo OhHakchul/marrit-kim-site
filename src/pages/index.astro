@@ -7,105 +7,369 @@
     <meta name="viewport" content="width=device-width" />
     <title>Marrit Kim van der Staaij | 김여름</title>
   </head>
-  <body class="bg-[#fafafa] text-gray-800 font-sans antialiased overflow-x-hidden">
+  <body>
     
-    <header class="relative w-full h-screen flex items-center justify-center">
-      <img src="/images/hero-bg.jpg" alt="House and Trees" class="absolute inset-0 w-full h-full object-cover z-0" />
-      <div class="absolute inset-0 bg-black/40 z-10"></div>
-      
-      <div class="relative z-20 text-center text-white px-6">
-        <h1 class="text-4xl md:text-6xl font-bold tracking-widest mb-4 drop-shadow-lg">
-          MARRIT KIM VAN DER STAAIJ
-        </h1>
-        <h2 class="text-2xl md:text-3xl font-light tracking-widest mb-6 drop-shadow-md">
-          김여름
-        </h2>
-        <p class="text-lg md:text-xl font-medium tracking-wide border-t border-white/50 pt-4 inline-block">
-          Researcher . Writer . Advocate
-        </p>
+    <header class="hero">
+      <img src="/images/hero-bg.jpg" alt="Background" class="hero-bg" />
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <h1>MARRIT KIM VAN DER STAAIJ</h1>
+        <h2>김여름</h2>
+        <p>Researcher . Writer . Advocate</p>
       </div>
-      
-      <div class="absolute bottom-10 z-20 animate-bounce">
-        <span class="text-white text-sm uppercase tracking-widest">Scroll</span>
-      </div>
+      <div class="scroll-indicator">Scroll ↓</div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-24 flex flex-col gap-32">
+    <main class="container">
       
-      <section class="flex flex-col md:flex-row gap-12 items-center">
-        <div class="w-full md:w-1/2">
-          <img src="/images/marrit-portrait.jpg" alt="Marrit Kim" class="rounded-xl shadow-lg w-full object-cover aspect-[4/5]" />
+      <section class="split-section">
+        <div class="image-wrapper">
+          <img src="/images/marrit-portrait.jpg" alt="Marrit Kim" class="portrait" />
         </div>
-        <div class="w-full md:w-1/2">
-          <h2 class="text-3xl font-bold mb-6 text-gray-900 border-b-2 border-gray-200 pb-2 inline-block">About</h2>
-          <p class="text-lg leading-relaxed text-gray-700 mb-4">
-            Marrit Kim van der Staaij / 김여름 is a Dutch-Korean researcher and writer based in Seoul, South Korea. With her background as a chemical analyst and biomedical researcher, she looks at the world with the questions: "How does this work?" and "How can I contribute to this?"
-          </p>
-          <p class="text-lg leading-relaxed text-gray-700 mb-4">
-            Currently, she is writing a book about her journey as a Descendant of a Korean Adoptee (DoKAD), exploring the intergenerational impact of adoption, identity, and belonging.
-          </p>
-          <p class="text-lg leading-relaxed text-gray-700">
-            Through writing, advocacy, and research, she aims to contribute to greater recognition of adoptees and their descendants, opening space for accountability, community, and healing.
-          </p>
+        <div class="text-wrapper">
+          <h2 class="section-title">About</h2>
+          <p>Marrit Kim van der Staaij / 김여름 is a Dutch-Korean researcher and writer based in Seoul, South Korea. With her background as a chemical analyst and biomedical researcher, she looks at the world with the questions: "How does this work?" and "How can I contribute to this?"</p>
+          <p>Currently, she is writing a book about her journey as a Descendant of a Korean Adoptee (DoKAD), exploring the intergenerational impact of adoption, identity, and belonging.</p>
+          <p>Through writing, advocacy, and research, she aims to contribute to greater recognition of adoptees and their descendants, opening space for accountability, community, and healing.</p>
         </div>
       </section>
 
-      <section class="flex flex-col-reverse md:flex-row gap-12 items-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-        <div class="w-full md:w-1/2">
-          <h2 class="text-sm font-bold tracking-widest text-gray-400 uppercase mb-2">Upcoming Book</h2>
-          <h3 class="text-3xl font-bold mb-4 text-gray-900 leading-tight">Traces of Freckles</h3>
-          <p class="text-xl italic text-gray-600 mb-6">"Back to the country that found my mother abandoned."</p>
-          <p class="text-lg leading-relaxed text-gray-700">
-            An exploration of the intergenerational impact of adoption, identity, and belonging through the lens of a Descendant of a Korean Adoptee.
-          </p>
+      <section class="split-section reverse">
+        <div class="text-wrapper bg-card">
+          <span class="eyebrow">Upcoming Book</span>
+          <h3 class="book-title">Traces of Freckles</h3>
+          <p class="quote">"Back to the country that found my mother abandoned."</p>
+          <p>An exploration of the intergenerational impact of adoption, identity, and belonging through the lens of a Descendant of a Korean Adoptee.</p>
         </div>
-        <div class="w-full md:w-1/2">
-          <img src="/images/book-cover.jpg" alt="Traces of Freckles" class="rounded-lg shadow-md w-full" />
+        <div class="image-wrapper">
+          <img src="/images/book-cover.jpg" alt="Traces of Freckles" class="book-img" />
         </div>
       </section>
 
-      <section>
-        <h2 class="text-3xl font-bold mb-10 text-gray-900 text-center">Projects & Advocacy</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <a href="https://dokadarchive.wordpress.com/dokadstories/" target="_blank" class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 text-center group">
-            <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">Dokadstories</h3>
-            <p class="text-gray-600">Archiving and sharing the stories of descendants of Korean adoptees.</p>
+      <section class="center-section">
+        <h2 class="section-title">Projects & Advocacy</h2>
+        <div class="grid-3">
+          <a href="https://dokadarchive.wordpress.com/dokadstories/" target="_blank" class="card">
+            <h3>Dokadstories</h3>
+            <p>Archiving and sharing the stories of descendants of Korean adoptees.</p>
           </a>
-
-          <a href="https://www.facebook.com/groups/777706757533831/" target="_blank" class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 text-center group">
-            <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">DoKAD Facebook</h3>
-            <p class="text-gray-600">A dedicated community group for DoKAD members to connect and share.</p>
+          <a href="https://www.facebook.com/groups/777706757533831/" target="_blank" class="card">
+            <h3>DoKAD Facebook</h3>
+            <p>A dedicated community group for DoKAD members to connect and share.</p>
           </a>
-
-          <a href="https://dokadarchive.wordpress.com/dokadarchive/information/f-4-12-visa-for-dokads/" target="_blank" class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 text-center group">
-            <h3 class="text-xl font-bold mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">F-4 Visa Guidelines</h3>
-            <p class="text-gray-600">Helpful resources and guidelines for navigating the F-4 visa process.</p>
+          <a href="https://dokadarchive.wordpress.com/dokadarchive/information/f-4-12-visa-for-dokads/" target="_blank" class="card">
+            <h3>F-4 Visa Guidelines</h3>
+            <p>Helpful resources and guidelines for navigating the F-4 visa process.</p>
           </a>
-
         </div>
       </section>
 
-      <section class="mb-20">
-        <h2 class="text-3xl font-bold mb-10 text-gray-900 text-center">Media & Panels</h2>
+      <section class="center-section">
+        <h2 class="section-title">Media & Panels</h2>
+        <div class="grid-2">
+          <img src="/images/panel-dokad.png" alt="DoKAD Panel" class="panel-img" />
+          <img src="/images/panel-mosaic.png" alt="Mosaic Panel" class="panel-img" />
+        </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <img src="/images/panel-dokad.png" alt="DoKAD Panel 2024" class="rounded-xl shadow-md w-full hover:scale-[1.02] transition-transform" />
-          <img src="/images/panel-mosaic.png" alt="Adoption Mosaic Panel Talk" class="rounded-xl shadow-md w-full hover:scale-[1.02] transition-transform" />
-        </div>
-
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-          <h3 class="text-xl font-bold mb-6 text-gray-900">Featured In</h3>
-          <ul class="space-y-4">
-            <li><a href="https://n.news.naver.com/article/003/0013233535" target="_blank" class="text-lg text-gray-700 hover:text-blue-600 border-b border-gray-300 hover:border-blue-600 transition-colors">Naver News Feature</a></li>
-            <li><a href="https://imnews.imbc.com/replay/straight/6710717_28993.html" target="_blank" class="text-lg text-gray-700 hover:text-blue-600 border-b border-gray-300 hover:border-blue-600 transition-colors">MBC Straight Interview</a></li>
-            <li><a href="https://www.youtube.com/watch?v=2zMyG2Z9a10&list=PLqQRuDoz8nbp_KA_pSsGyFjyFezHAEPPO&index=8" target="_blank" class="text-lg text-gray-700 hover:text-blue-600 border-b border-gray-300 hover:border-blue-600 transition-colors">YouTube Panel Discussion</a></li>
-            <li><a href="https://www.kmaeilsinbo.kr/news/articleView.html?idxno=358128" target="_blank" class="text-lg text-gray-700 hover:text-blue-600 border-b border-gray-300 hover:border-blue-600 transition-colors">Korea Maeil Shinbo Article</a></li>
-            <li><a href="https://frieschdagblad.nl/regio/Marrits-moeizame-zoektocht-naar-waar-haar-wortels-liggen-..." target="_blank" class="text-lg text-gray-700 hover:text-blue-600 border-b border-gray-300 hover:border-blue-600 transition-colors">Friesch Dagblad (Dutch News)</a></li>
+        <div class="links-card">
+          <h3>Featured In</h3>
+          <ul class="media-links">
+            <li><a href="https://n.news.naver.com/article/003/0013233535" target="_blank">Naver News Feature</a></li>
+            <li><a href="https://imnews.imbc.com/replay/straight/6710717_28993.html" target="_blank">MBC Straight Interview</a></li>
+            <li><a href="https://www.youtube.com/watch?v=2zMyG2Z9a10" target="_blank">YouTube Panel Discussion</a></li>
+            <li><a href="https://www.kmaeilsinbo.kr/news/articleView.html?idxno=358128" target="_blank">Korea Maeil Shinbo Article</a></li>
+            <li><a href="https://frieschdagblad.nl/regio/Marrits-moeizame-zoektocht-naar-waar-haar-wortels-liggen-..." target="_blank">Friesch Dagblad (Dutch News)</a></li>
           </ul>
         </div>
       </section>
 
     </main>
+
   </body>
 </html>
+
+<style>
+  /* --- GLOBAL VARIABLES & RESET --- */
+  :root {
+    --bg-color: #fafafa;
+    --text-main: #222;
+    --text-light: #555;
+    --accent: #000;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* --- HERO SECTION --- */
+  .hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 3;
+    padding: 0 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding-top: 10px;
+    display: inline-block;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    z-index: 3;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* --- MAIN CONTENT CONTAINER --- */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  /* --- TYPOGRAPHY --- */
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+  }
+
+  /* --- LAYOUT STRUCTURES --- */
+  .split-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .split-section.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .image-wrapper {
+    flex: 1;
+  }
+
+  .text-wrapper {
+    flex: 1;
+  }
+
+  .center-section {
+    text-align: center;
+  }
+
+  .center-section .section-title {
+    margin-bottom: 50px;
+  }
+
+  /* --- SPECIFIC ELEMENTS --- */
+  .portrait {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
+    aspect-ratio: 4/5;
+  }
+
+  .bg-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+  }
+
+  .eyebrow {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .book-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .quote {
+    font-style: italic;
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+  .book-img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  /* --- GRIDS --- */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-main);
+    border: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .panel-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+
+  /* --- LISTS & LINKS --- */
+  .links-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .links-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .media-links {
+    list-style: none;
+  }
+
+  .media-links li {
+    margin-bottom: 15px;
+  }
+
+  .media-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .media-links a:hover {
+    color: #000;
+    border-bottom-color: #000;
+  }
+
+  /* --- RESPONSIVE DESIGN FOR PHONES --- */
+  @media (max-width: 768px) {
+    .hero-text h1 { font-size: 2rem; }
+    .split-section, .split-section.reverse { flex-direction: column; }
+    .grid-3, .grid-2 { grid-template-columns: 1fr; }
+    .container { gap: 80px; padding: 60px 20px; }
+  }
+</style>
