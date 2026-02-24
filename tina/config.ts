@@ -1,15 +1,14 @@
 import { defineConfig } from "tinacms";
 
-// Your hosting provider likely exposes this as an environment variable
+// Hardcode the branch to avoid "process" errors
 const branch = 'main';
 
 export default defineConfig({
   branch,
-
-  // Get this from tina.io
-  clientId: "9b3a0357-86c1-46fd-a49a-d1e2644389fe",
-  // Get this from tina.io
-  token: "7581c8e0df5b52ce535ad98d0a38fd8146bfa50e",
+  
+  // PASTE YOUR KEYS HERE (Keep the quotes!)
+  clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d",
+  token: "136ae977685dd7b8869f8f42eb389d5a8f127b13",
 
   build: {
     outputFolder: "admin",
@@ -21,7 +20,6 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
       {
@@ -40,12 +38,12 @@ export default defineConfig({
           {
             type: "string",
             name: "heroTitle",
-            label: "Hero Title (Name)",
+            label: "Hero Title",
           },
           {
             type: "string",
             name: "heroSubtitle",
-            label: "Hero Subtitle (Korean Name)",
+            label: "Hero Subtitle",
           },
           {
             type: "string",
@@ -78,4 +76,3 @@ export default defineConfig({
     ],
   },
 });
-// Force re-index update
