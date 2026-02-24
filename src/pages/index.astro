@@ -24,7 +24,7 @@
       
       <section class="split-section">
         <div class="image-wrapper">
-          <img src="/images/marrit-portrait1.jpeg" alt="Marrit Kim van der Staaij" class="portrait" />
+          <img src="/images/marrit-portrait.jpg" alt="Marrit Kim van der Staaij" class="portrait" />
         </div>
         <div class="text-wrapper">
           <h2 class="section-title">About</h2>
@@ -110,6 +110,12 @@
       </section>
 
     </main>
+
+    <footer class="site-footer">
+      <p>
+        Website created by <a href="https://alexandrebize.github.io/" target="_blank">Alexandre Bize</a>
+      </p>
+    </footer>
 
   </body>
 </html>
@@ -233,7 +239,7 @@
   .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 100px 20px 60px; /* added bottom padding */
     display: flex;
     flex-direction: column;
     gap: 120px;
@@ -435,6 +441,28 @@
   .media-links a:hover {
     color: #000;
     border-bottom-color: #000;
+  }
+
+  /* --- FOOTER --- */
+  .site-footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    color: #888;
+    background-color: transparent;
+    opacity: 0.8;
+  }
+
+  .site-footer a {
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px dotted #888;
+    transition: color 0.2s;
+  }
+
+  .site-footer a:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
   }
 
   /* --- RESPONSIVE DESIGN FOR PHONES --- */
