@@ -7,9 +7,9 @@ export default defineConfig({
   branch,
 
   // Get this from tina.io
-  clientId: "49edd256-9bff-43fc-86cc-7f91d5de2b05",
+  clientId: "9b3a0357-86c1-46fd-a49a-d1e2644389fe",
   // Get this from tina.io
-  token: "75af8b14d85832a6f37207e88d0cc391f9be9b6b",
+  token: "c5ad6f279d49b5d8aa38a493273483b83fb6ee06",
 
   build: {
     outputFolder: "admin",
