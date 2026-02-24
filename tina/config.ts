@@ -6,7 +6,7 @@ const branch = 'main';
 export default defineConfig({
   branch,
   
-  // PASTE YOUR KEYS HERE (Keep the quotes!)
+  // REPLACE THESE WITH YOUR NEW KEYS FROM STEP 1
   clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d",
   token: "136ae977685dd7b8869f8f42eb389d5a8f127b13",
 
