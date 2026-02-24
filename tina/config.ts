@@ -1,3 +1,4 @@
+declare const process: any;
 import { defineConfig } from "tinacms";
 import { BlogCollection } from "./collections/blog";
 import { GlobalConfigCollection } from "./collections/global-config";
