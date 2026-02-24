@@ -1,7 +1,4 @@
 import { defineConfig } from "tinacms";
-import { BlogCollection } from "./collections/blog";
-import { GlobalConfigCollection } from "./collections/global-config";
-import { PageCollection } from "./collections/page";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch = 'main';
@@ -81,3 +78,4 @@ export default defineConfig({
     ],
   },
 });
+// Force re-index update
