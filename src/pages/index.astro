@@ -102,7 +102,7 @@
         <h2 class="section-title">Contact</h2>
         <div class="links-card contact-card">
           <ul class="media-links">
-            <li id="email-container"><strong>Email:</strong> </li> 
+            <li id="email-container"> </li> 
       
             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/marrit-kim-van-der-staaij-b8a227153" target="_blank">Marrit Kim van der Staaij</a></li>
             <li><strong>Instagram:</strong> <a href="https://www.instagram.com/cheesesaykimchi" target="_blank">@cheesesaykimchi</a></li>
@@ -118,25 +118,23 @@
       </p>
     </footer>
     <script is:inline>
-      (function() {
-        // 1. Define the parts of the email
-        const user = "mkvdstaaij";
-        const domain = "gmail.com";
-        const fullEmail = user + "@" + domain;
+    (function() {
+      const user = "mkvdstaaij";
+      const domain = "gmail.com";
+      const fullEmail = user + "@" + domain;
 
-        // 2. Find the container we created above
-        const container = document.getElementById('email-container');
+      const container = document.getElementById('email-container');
 
-        if (container) {
-          // 3. Create the clickable link
-          const link = document.createElement('a');
-          link.href = "mailto:" + fullEmail;
-          link.textContent = "Email";
-          
-          // 4. Put the link into the page
-          container.appendChild(link);
-        }
-      })();
+      if (container) {
+        const link = document.createElement('a');
+        link.href = "mailto:" + fullEmail;
+        
+        // Wrap the text in <strong> tags
+        link.innerHTML = "<strong>Email</strong>";
+        
+        container.appendChild(link);
+      }
+    })();
     </script>
   </body>
 </html>
