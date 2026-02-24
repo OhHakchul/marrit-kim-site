@@ -49,7 +49,7 @@ bookText: >
   fight was not unique, research found that adoptees are four times more likely
   to die by suicide. When adoptees are sent out of their home country, no one
   considers that one day they could have children themselves, who are also
-  Korean. Yet here we are. Most of us are very young, or still to be born, but
-  the first wave of descendants of adoptees are adults. We call ourselves
+  Korean. Yet here we are. Most of us are very young, or still to be born, but the
+  first wave of descendants of adoptees are adults. We call ourselves
   Descendants of Korean Adoptees (DoKADs) and this is the story of one of them.
 ---
