@@ -1,5 +1,11 @@
 ---
 // src/pages/index.astro
+import { client } from '../../tina/__generated__/client'
+import { TinaMarkdown } from 'tinacms/dist/rich-text'
+
+// fetch the data from Tina
+const response = await client.queries.page({ relativePath: 'home.md' });
+const data = response.data.page;
 ---
 <html lang="en">
   <head>
@@ -13,9 +19,9 @@
       <img src="/images/hero-bg.jpg" alt="Background" class="hero-bg" />
       <div class="hero-overlay"></div>
       <div class="hero-text">
-        <h1>MARRIT KIM VAN DER STAAIJ</h1>
-        <h2>김여름</h2>
-        <p>Researcher . Writer </p>
+        <h1>{data.heroTitle}</h1>
+        <h2>{data.heroSubtitle}</h2>
+        <p>{data.heroDescription}</p>
       </div>
       <div class="scroll-indicator">Scroll ↓</div>
     </header>
@@ -24,27 +30,31 @@
       
       <section class="split-section">
         <div class="image-wrapper">
-          <img src="/images/marrit-portrait1.jpeg" alt="Marrit Kim van der Staaij" class="portrait" />
+          <img src={data.aboutSection.aboutImage} alt="Marrit Kim van der Staaij" class="portrait" />
         </div>
         <div class="text-wrapper">
-          <h2 class="section-title">About</h2>
-          <p>Marrit Kim van der Staaij / 김여름 is a Dutch-Korean researcher and writer based in Seoul, South Korea. With her background as a chemical analyst and biomedical researcher, she looks at the world with the questions: 'How does this work?' and 'How can I contribute to this?' She brings this curiosity into her scientific work, storytelling, and advocacy for adoptees and their descendants. In this way, she hopes to create understanding and improvements in science and policies.</p>
-          <p>Currently, she is writing a book about her journey as a Descendant of a Korean Adoptee (DoKAD), exploring the intergenerational impact of adoption, identity, and belonging. With a scientific background and a strong ethical focus, Marrit/여름 approaches her writing with an eye for detail and attention to connection and complexity.</p>
-          <p>Through writing, advocacy, and research, she aims to contribute to greater recognition of (descendants of) adoptees and opening space for accountability, community, and healing.</p>
+          <h2 class="section-title">{data.aboutSection.aboutTitle}</h2>
+          
+          <div class="tina-content">
+            <TinaMarkdown content={data.aboutSection.aboutText} />
+          </div>
+
         </div>
       </section>
 
       <section class="split-section reverse">
         <div class="text-wrapper bg-card">
           <span class="eyebrow">Upcoming Book</span>
-          <h3 class="book-title">Traces of Freckles</h3>
-          <p class="quote">Back to the country that found my mother abandoned.</p>
-          <p>Traces of Freckles is a deeply personal memoir about longing and searching for roots in the country where my mother once was found abandoned. It reflects on how adoption leaves traces rooted through generations.</p>
-          <p>At fifteen, I found myself repeating my mother’s history. Surviving life. Fighting the same darkness she had fought, and afraid our stories would end the same way. When my mother died, I also lost my connection to Korea. The adoption cut off her Korean roots, while she was expected to blossom in the Netherlands. I grew up knowing what it meant to be Dutch, but never truly understood what it meant to be Korean. I returned to the country that once found my mother abandoned. For three years I immersed myself in the Korean life: a home, friends, work, language, and food. Only to find out that it was the other way around. Korea had abandoned her.</p>
-          <p>My mother is just one of the over 200,000 intercountry Korean adoptees. Her fight was not unique, research found that adoptees are four times more likely to die by suicide. When adoptees are sent out of their home country, no one considers that one day they could have children themselves, who are also Korean. Yet here we are. Most of us are very young, or still to be born, but the first wave of descendants of adoptees are adults. We call ourselves Descendants of Korean Adoptees (DoKADs) and this is the story of one of them.</p>
+          <h3 class="book-title">{data.bookSection.bookTitle}</h3>
+          <p class="quote">{data.bookSection.bookQuote}</p>
+          
+          <div class="tina-content">
+             <TinaMarkdown content={data.bookSection.bookText} />
+          </div>
+
         </div>
         <div class="image-wrapper">
-          <img src="/images/book-cover.jpg" alt="The traces of freckles of my mother's mother" class="book-img" />
+          <img src={data.bookSection.bookCover} alt="The traces of freckles of my mother's mother" class="book-img" />
         </div>
       </section>
 
@@ -52,11 +62,11 @@
         <h2 class="section-title">Projects</h2>
         <div class="grid-3">
           <a href="https://dokadarchive.wordpress.com/" target="_blank" class="card">
-            <h3>DoKADs Archive</h3>
+            <h3>DokadArchive</h3>
             <p>Main archive platform for Descendants of Korean Adoptees.</p>
           </a>
           <div class="card">
-            <h3>DoKADs Stories</h3>
+            <h3>Dokadstories</h3>
             <p>Archiving and sharing the stories of descendants of Korean adoptees.</p>
             <div class="card-links">
               <a href="https://dokadarchive.wordpress.com/dokadstories/" target="_blank">Website</a> | 
@@ -77,8 +87,8 @@
       <section class="center-section">
         <h2 class="section-title">Media</h2>
         <div class="grid-2">
-          <a href="https://vimeo.com/958241304" target="_blank"><img src="/images/panel-dokad.png" alt="DoKAD Panel 2024" class="panel-img" /></a>
-          <a href="https://programs.adoptionmosaic.com/product-details-4170/product/654c0010e0909c71c67e3d26" target="_blank"><img src="/images/panel-mosaic.png" alt="Adoption Mosaic Panel Talk" class="panel-img" /></a>
+          <img src="/images/panel-dokad.png" alt="DoKAD Panel 2024" class="panel-img" />
+          <img src="/images/panel-mosaic.png" alt="Adoption Mosaic Panel Talk" class="panel-img" />
         </div>
         
         <div class="links-card">
@@ -89,7 +99,7 @@
             <li><a href="https://m.koreaherald.com/view.php?ud=20240707050067" target="_blank">Korea Herald Feature</a></li>
             <li><a href="https://www.kmaeil.com/news/articleView.html?idxno=472298" target="_blank">Kmaeil News Article</a></li>
             <li><a href="https://www.kmaeilsinbo.kr/news/articleView.html?idxno=358128" target="_blank">Korea Maeil Shinbo Article</a></li>
-            <li><a href="https://youtu.be/2zMyG2Z9a10?si=RcAua01ushtsapMe&t=937" target="_blank">Adoption and State Violence: Full Version – Straight Episodes 294 & 295 | Straight Rewatch</a></li>
+            <li><a href="https://www.youtube.com/watch?v=2zMyG2Z9a10&list=PLqQRuDoz8nbp_KA_pSsGyFjyFezHAEPPO&index=8" target="_blank">YouTube Panel Discussion</a></li>
             <li><a href="https://vimeo.com/958241304" target="_blank">Vimeo Video Feature</a></li>
             <li><a href="https://programs.adoptionmosaic.com/product-details-4170/product/654c0010e0909c71c67e3d26" target="_blank">Adoption Mosaic Panel</a></li>
             <li><a href="https://www.thehalfieproject.com/photography-people/i-am-halfdutch-halfkorean-and-the-daughter-of-a-korean-adoptee" target="_blank">The Halfie Project Photography</a></li>
@@ -102,8 +112,7 @@
         <h2 class="section-title">Contact</h2>
         <div class="links-card contact-card">
           <ul class="media-links">
-            <li id="email-container"> </li> 
-      
+            <li><strong>Email:</strong> <a href="mailto:mkvdstaaij@gmail.com">mkvdstaaij@gmail.com</a></li>
             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/marrit-kim-van-der-staaij-b8a227153" target="_blank">Marrit Kim van der Staaij</a></li>
             <li><strong>Instagram:</strong> <a href="https://www.instagram.com/cheesesaykimchi" target="_blank">@cheesesaykimchi</a></li>
           </ul>
@@ -114,28 +123,10 @@
 
     <footer class="site-footer">
       <p>
-        Website created by <a href="https://www.instagram.com/hakchuloh/" target="_blank">Hakchul Oh</a>
+        Website created by <a href="https://alexandrebize.github.io/" target="_blank">Alexandre Bize</a>
       </p>
     </footer>
-    <script is:inline>
-    (function() {
-      const user = "mkvdstaaij";
-      const domain = "gmail.com";
-      const fullEmail = user + "@" + domain;
 
-      const container = document.getElementById('email-container');
-
-      if (container) {
-        const link = document.createElement('a');
-        link.href = "mailto:" + fullEmail;
-        
-        // Wrap the text in <strong> tags
-        link.innerHTML = "<strong>Email</strong>";
-        
-        container.appendChild(link);
-      }
-    })();
-    </script>
   </body>
 </html>
 
@@ -258,7 +249,7 @@
   .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 100px 20px 60px; /* added bottom padding */
+    padding: 100px 20px 60px;
     display: flex;
     flex-direction: column;
     gap: 120px;
@@ -274,6 +265,14 @@
     display: inline-block;
   }
 
+  /* Target the paragraphs inside Tina Content specifically */
+  .tina-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+  }
+  
+  /* Standard p tag fallback */
   p {
     font-size: 1.1rem;
     color: var(--text-light);
