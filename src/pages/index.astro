@@ -15,7 +15,7 @@
       <div class="hero-text">
         <h1>MARRIT KIM VAN DER STAAIJ</h1>
         <h2>김여름</h2>
-        <p>Researcher . Writer . Advocate</p>
+        <p>Researcher . Writer </p>
       </div>
       <div class="scroll-indicator">Scroll ↓</div>
     </header>
@@ -24,7 +24,7 @@
       
       <section class="split-section">
         <div class="image-wrapper">
-          <img src="/images/marrit-portrait1.jpg" alt="Marrit Kim van der Staaij" class="portrait" />
+          <img src="/images/marrit-portrait1.jpeg" alt="Marrit Kim van der Staaij" class="portrait" />
         </div>
         <div class="text-wrapper">
           <h2 class="section-title">About</h2>
@@ -52,11 +52,11 @@
         <h2 class="section-title">Projects</h2>
         <div class="grid-3">
           <a href="https://dokadarchive.wordpress.com/" target="_blank" class="card">
-            <h3>DokadArchive</h3>
+            <h3>DoKADs Archive</h3>
             <p>Main archive platform for Descendants of Korean Adoptees.</p>
           </a>
           <div class="card">
-            <h3>Dokadstories</h3>
+            <h3>DoKADs Stories</h3>
             <p>Archiving and sharing the stories of descendants of Korean adoptees.</p>
             <div class="card-links">
               <a href="https://dokadarchive.wordpress.com/dokadstories/" target="_blank">Website</a> | 
@@ -77,8 +77,8 @@
       <section class="center-section">
         <h2 class="section-title">Media</h2>
         <div class="grid-2">
-          <img src="/images/panel-dokad.png" alt="DoKAD Panel 2024" class="panel-img" />
-          <img src="/images/panel-mosaic.png" alt="Adoption Mosaic Panel Talk" class="panel-img" />
+          <a href="https://vimeo.com/958241304" target="_blank"><img src="/images/panel-dokad.png" alt="DoKAD Panel 2024" class="panel-img" /></a>
+          <a href="https://programs.adoptionmosaic.com/product-details-4170/product/654c0010e0909c71c67e3d26" target="_blank"><img src="/images/panel-mosaic.png" alt="Adoption Mosaic Panel Talk" class="panel-img" /></a>
         </div>
         
         <div class="links-card">
@@ -89,7 +89,7 @@
             <li><a href="https://m.koreaherald.com/view.php?ud=20240707050067" target="_blank">Korea Herald Feature</a></li>
             <li><a href="https://www.kmaeil.com/news/articleView.html?idxno=472298" target="_blank">Kmaeil News Article</a></li>
             <li><a href="https://www.kmaeilsinbo.kr/news/articleView.html?idxno=358128" target="_blank">Korea Maeil Shinbo Article</a></li>
-            <li><a href="https://www.youtube.com/watch?v=2zMyG2Z9a10&list=PLqQRuDoz8nbp_KA_pSsGyFjyFezHAEPPO&index=8" target="_blank">YouTube Panel Discussion</a></li>
+            <li><a href="https://youtu.be/2zMyG2Z9a10?si=RcAua01ushtsapMe&t=937" target="_blank">Adoption and State Violence: Full Version – Straight Episodes 294 & 295 | Straight Rewatch</a></li>
             <li><a href="https://vimeo.com/958241304" target="_blank">Vimeo Video Feature</a></li>
             <li><a href="https://programs.adoptionmosaic.com/product-details-4170/product/654c0010e0909c71c67e3d26" target="_blank">Adoption Mosaic Panel</a></li>
             <li><a href="https://www.thehalfieproject.com/photography-people/i-am-halfdutch-halfkorean-and-the-daughter-of-a-korean-adoptee" target="_blank">The Halfie Project Photography</a></li>
@@ -102,7 +102,8 @@
         <h2 class="section-title">Contact</h2>
         <div class="links-card contact-card">
           <ul class="media-links">
-            <li><strong>Email:</strong> <a href="mailto:mkvdstaaij@gmail.com">mkvdstaaij@gmail.com</a></li>
+            <li id="email-container"><strong>Email:</strong> </li> 
+      
             <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/marrit-kim-van-der-staaij-b8a227153" target="_blank">Marrit Kim van der Staaij</a></li>
             <li><strong>Instagram:</strong> <a href="https://www.instagram.com/cheesesaykimchi" target="_blank">@cheesesaykimchi</a></li>
           </ul>
@@ -113,10 +114,30 @@
 
     <footer class="site-footer">
       <p>
-        Website created by <a href="https://alexandrebize.github.io/" target="_blank">Alexandre Bize</a>
+        Website created by <a href="https://www.instagram.com/hakchuloh/" target="_blank">Hakchul Oh</a>
       </p>
     </footer>
+    <script is:inline>
+      (function() {
+        // 1. Define the parts of the email
+        const user = "mkvdstaaij";
+        const domain = "gmail.com";
+        const fullEmail = user + "@" + domain;
 
+        // 2. Find the container we created above
+        const container = document.getElementById('email-container');
+
+        if (container) {
+          // 3. Create the clickable link
+          const link = document.createElement('a');
+          link.href = "mailto:" + fullEmail;
+          link.textContent = fullEmail;
+          
+          // 4. Put the link into the page
+          container.appendChild(link);
+        }
+      })();
+    </script>
   </body>
 </html>
 
