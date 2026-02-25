@@ -1,14 +1,14 @@
 import { defineConfig } from "tinacms";
 
-// This is the safety fix: we tell it exactly which branch to use
+// Hardcoding 'main' clears the "Cannot find name 'process'" error
 const branch = "main";
 
 export default defineConfig({
   branch,
   
-  // PASTE YOUR LATEST KEYS HERE
-  clientId: "d3b7d778-a442-4ca8-a0ca-744680ec24d3",
-  token: "e701c499a6cad569edf9d05fe5fa925f05f1eb78",
+  // Replace these with your current active keys from app.tina.io
+  clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d",
+  token: "PASTE_YOUR_ACTUAL_TOKEN_HERE",
 
   build: {
     outputFolder: "admin",
