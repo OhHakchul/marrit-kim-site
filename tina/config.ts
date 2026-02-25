@@ -7,7 +7,7 @@ export default defineConfig({
   branch,
   
   // Replace these with your current active keys from app.tina.io
-  clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d",
+  clientId: "d3b7d778-a442-4ca8-a0ca-744680ec24d3",
   token: "e701c499a6cad569edf9d05fe5fa925f05f1eb78",
 
   build: {
