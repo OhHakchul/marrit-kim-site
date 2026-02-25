@@ -1,14 +1,14 @@
 import { defineConfig } from "tinacms";
 
-// Hardcode branch
+// Hardcoding the branch name to fix the 'process' errors
 const branch = 'main';
 
 export default defineConfig({
   branch,
-  
-  // LEAVE THESE BLANK FOR NOW - WE WILL FILL THEM IN STEP 4
-  clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d",
-  token: "136ae977685dd7b8869f8f42eb389d5a8f127b13",
+
+  // Get these from your project settings at app.tina.io
+  clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d", 
+  token: "PASTE_YOUR_NEW_TOKEN_HERE",
 
   build: {
     outputFolder: "admin",
@@ -50,7 +50,6 @@ export default defineConfig({
             name: "heroDescription",
             label: "Hero Description",
           },
-          // NESTED SECTION 1: ABOUT
           {
             type: "object",
             name: "aboutSection",
@@ -61,7 +60,6 @@ export default defineConfig({
               { type: "rich-text", name: "aboutText", label: "About Text" },
             ]
           },
-          // NESTED SECTION 2: BOOK
           {
             type: "object",
             name: "bookSection",
