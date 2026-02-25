@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-// https://astro.build/config
+
 export default defineConfig({
-  integrations: [react()]
+  site: 'https://ohhakchul.github.io',
+  base: '/marrit-kim-site', // This leading slash is important
+  integrations: [react()],
 });
