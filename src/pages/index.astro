@@ -44,8 +44,15 @@
           <p>My mother is just one of the over 200,000 intercountry Korean adoptees. Her fight was not unique, research found that adoptees are four times more likely to die by suicide. When adoptees are sent out of their home country, no one considers that one day they could have children themselves, who are also Korean. Yet here we are. Most of us are very young, or still to be born, but the first wave of descendants of adoptees are adults. We call ourselves Descendants of Korean Adoptees (DoKADs) and this is the story of one of them.</p>
         </div>
         <div class="image-wrapper">
-          <img src="/images/book-cover.jpg" alt="The traces of freckles of my mother's mother" class="book-img" />
-        </div>
+  	  <a href="#book-viewer">
+    	    <img src="/images/book-cover.jpg" alt="Traces of Freckles Cover" class="book-img" id="cover-image" />
+  	  </a>
+	</div>
+
+	<div id="book-viewer" class="lightbox">
+  	  <a href="#_" class="lightbox-close"></a>
+  	    <img src="/images/book-cover.jpg" alt="Book Cover Large" />
+	</div>
       </section>
 
       <section class="center-section">
@@ -495,7 +502,41 @@
     color: #000;
     border-bottom: 1px solid #000;
   }
+/* The background overlay */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
 
+/* Show the lightbox when the URL ends in #book-viewer */
+.lightbox:target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Clicking outside the image closes it */
+.lightbox-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
   /* --- RESPONSIVE DESIGN FOR PHONES --- */
   @media (max-width: 768px) {
     .hero-text h1 { font-size: 2rem; }
