@@ -15,13 +15,11 @@ aboutSection:
     descendants. In this way, she hopes to create understanding and improvements
     in science and policies.
 
-
     Currently, she is writing a book about her journey as a Descendant of a
     Korean Adoptee (DoKAD), exploring the intergenerational impact of adoption,
     identity, and belonging. With a scientific background and a strong ethical
     focus, Marrit/여름 approaches her writing with an eye for detail and
     attention to connection and complexity.
-
 
     Through writing, advocacy, and research, she aims to contribute to greater
     recognition of (descendants of) adoptees and opening space for
@@ -35,7 +33,6 @@ bookSection:
     for roots in the country where my mother once was found abandoned. It
     reflects on how adoption leaves traces rooted through generations.
 
-
     At fifteen, I found myself repeating my mother’s history. Surviving life.
     Fighting the same darkness she had fought, and afraid our stories would end
     the same way. When my mother died, I also lost my connection to Korea. The
@@ -45,7 +42,6 @@ bookSection:
     found my mother abandoned. For three years I immersed myself in the Korean
     life: a home, friends, work, language, and food. Only to find out that it
     was the other way around. Korea had abandoned her.
-
 
     My mother is just one of the over 200,000 intercountry Korean adoptees. Her
     fight was not unique, research found that adoptees are four times more

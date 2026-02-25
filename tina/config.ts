@@ -1,14 +1,14 @@
 import { defineConfig } from "tinacms";
 
-// 1. Hardcoded branch to prevent "process is not defined" error
+// Hardcode branch
 const branch = 'main';
 
 export default defineConfig({
   branch,
-
-  // 2. PASTE YOUR KEYS HERE
-  clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d",
-  token: "136ae977685dd7b8869f8f42eb389d5a8f127b13",
+  
+  // LEAVE THESE BLANK FOR NOW - WE WILL FILL THEM IN STEP 4
+  clientId: "PLACEHOLDER_ID",
+  token: "PLACEHOLDER_TOKEN",
 
   build: {
     outputFolder: "admin",
@@ -28,7 +28,6 @@ export default defineConfig({
         path: "content/pages",
         format: "md",
         fields: [
-          // --- HERO SECTION (Flat) ---
           {
             type: "string",
             name: "title",
@@ -51,44 +50,28 @@ export default defineConfig({
             name: "heroDescription",
             label: "Hero Description",
           },
-
-          // --- ABOUT SECTION (Flat - Matches your Screenshot) ---
+          // NESTED SECTION 1: ABOUT
           {
-            type: "image",
-            name: "aboutImage",
-            label: "About: Portrait Image"
+            type: "object",
+            name: "aboutSection",
+            label: "About Section",
+            fields: [
+              { type: "image", name: "aboutImage", label: "Portrait Image" },
+              { type: "string", name: "aboutTitle", label: "Section Title" },
+              { type: "rich-text", name: "aboutText", label: "About Text" },
+            ]
           },
+          // NESTED SECTION 2: BOOK
           {
-            type: "string",
-            name: "aboutTitle",
-            label: "About: Section Title"
-          },
-          {
-            type: "rich-text",
-            name: "aboutText",
-            label: "About: Text"
-          },
-
-          // --- BOOK SECTION (Flat - Matches your Screenshot) ---
-          {
-            type: "string",
-            name: "bookTitle",
-            label: "Book: Title"
-          },
-          {
-            type: "string",
-            name: "bookQuote",
-            label: "Book: Quote"
-          },
-          {
-            type: "image",
-            name: "bookCover",
-            label: "Book: Cover Image"
-          },
-          {
-            type: "rich-text",
-            name: "bookText",
-            label: "Book: Description"
+            type: "object",
+            name: "bookSection",
+            label: "Book Section",
+            fields: [
+              { type: "string", name: "bookTitle", label: "Book Title" },
+              { type: "string", name: "bookQuote", label: "Book Quote" },
+              { type: "image", name: "bookCover", label: "Book Cover" },
+              { type: "rich-text", name: "bookText", label: "Book Description" },
+            ]
           },
         ],
       },
