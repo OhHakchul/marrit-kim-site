@@ -1,5 +1,6 @@
 import { defineConfig } from "tinacms";
 
+// Safety: hardcode to 'main' to avoid the 'process' errors from before
 const branch = "main";
 
 export default defineConfig({
@@ -19,22 +20,24 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "page",
-        label: "Pages",
+        name: "post",
+        label: "Posts",
         path: "content/pages",
         format: "md",
         fields: [
-          { type: "string", name: "title", label: "Title", isTitle: true, required: true },
-          { type: "string", name: "heroTitle", label: "Hero Title" },
-          { type: "string", name: "heroSubtitle", label: "Hero Subtitle" },
-          { type: "string", name: "heroDescription", label: "Hero Description" },
-          { type: "image", name: "aboutImage", label: "About Image" },
-          { type: "string", name: "aboutTitle", label: "About Title" },
-          { type: "rich-text", name: "aboutText", label: "About Text" },
-          { type: "string", name: "bookTitle", label: "Book Title" },
-          { type: "string", name: "bookQuote", label: "Book Quote" },
-          { type: "image", name: "bookCover", label: "Book Cover" },
-          { type: "rich-text", name: "bookText", label: "Book Text" },
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
         ],
       },
     ],
