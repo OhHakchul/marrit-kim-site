@@ -7,8 +7,8 @@ export default defineConfig({
   branch,
 
   // Get these from your project settings at app.tina.io
-  clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d", 
-  token: "PASTE_YOUR_NEW_TOKEN_HERE",
+  clientId: "5dbf021d-14b4-4378-9dea-8bf05a00dba0", 
+  token: "fcde249659887db0420f47caca58394520969579",
 
   build: {
     outputFolder: "admin",
