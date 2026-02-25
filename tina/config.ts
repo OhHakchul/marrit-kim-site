@@ -8,7 +8,7 @@ export default defineConfig({
   
   // Replace these with your current active keys from app.tina.io
   clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d",
-  token: "PASTE_YOUR_ACTUAL_TOKEN_HERE",
+  token: "e701c499a6cad569edf9d05fe5fa925f05f1eb78",
 
   build: {
     outputFolder: "admin",
