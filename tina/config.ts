@@ -7,8 +7,8 @@ export default defineConfig({
   branch,
   
   // LEAVE THESE BLANK FOR NOW - WE WILL FILL THEM IN STEP 4
-  clientId: "PLACEHOLDER_ID",
-  token: "PLACEHOLDER_TOKEN",
+  clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d",
+  token: "136ae977685dd7b8869f8f42eb389d5a8f127b13",
 
   build: {
     outputFolder: "admin",
