@@ -1,12 +1,12 @@
 import { defineConfig } from "tinacms";
 
-// Hardcode the branch to avoid "process" errors
+// 1. Hardcoded branch to prevent "process is not defined" error
 const branch = 'main';
 
 export default defineConfig({
   branch,
-  
-  // REPLACE THESE WITH YOUR NEW KEYS FROM STEP 1
+
+  // 2. PASTE YOUR KEYS HERE
   clientId: "95f0867b-a1c2-40a8-949a-b640ee12f24d",
   token: "136ae977685dd7b8869f8f42eb389d5a8f127b13",
 
@@ -28,6 +28,7 @@ export default defineConfig({
         path: "content/pages",
         format: "md",
         fields: [
+          // --- HERO SECTION (Flat) ---
           {
             type: "string",
             name: "title",
@@ -50,26 +51,44 @@ export default defineConfig({
             name: "heroDescription",
             label: "Hero Description",
           },
+
+          // --- ABOUT SECTION (Flat - Matches your Screenshot) ---
           {
-            type: "object",
-            name: "aboutSection",
-            label: "About Section",
-            fields: [
-              { type: "image", name: "aboutImage", label: "Portrait Image" },
-              { type: "string", name: "aboutTitle", label: "Section Title" },
-              { type: "rich-text", name: "aboutText", label: "About Text" },
-            ]
+            type: "image",
+            name: "aboutImage",
+            label: "About: Portrait Image"
           },
           {
-            type: "object",
-            name: "bookSection",
-            label: "Book Section",
-            fields: [
-              { type: "string", name: "bookTitle", label: "Book Title" },
-              { type: "string", name: "bookQuote", label: "Book Quote" },
-              { type: "image", name: "bookCover", label: "Book Cover" },
-              { type: "rich-text", name: "bookText", label: "Book Description" },
-            ]
+            type: "string",
+            name: "aboutTitle",
+            label: "About: Section Title"
+          },
+          {
+            type: "rich-text",
+            name: "aboutText",
+            label: "About: Text"
+          },
+
+          // --- BOOK SECTION (Flat - Matches your Screenshot) ---
+          {
+            type: "string",
+            name: "bookTitle",
+            label: "Book: Title"
+          },
+          {
+            type: "string",
+            name: "bookQuote",
+            label: "Book: Quote"
+          },
+          {
+            type: "image",
+            name: "bookCover",
+            label: "Book: Cover Image"
+          },
+          {
+            type: "rich-text",
+            name: "bookText",
+            label: "Book: Description"
           },
         ],
       },
