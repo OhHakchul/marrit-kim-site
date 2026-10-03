@@ -95,7 +95,7 @@
         </div>
         
         <div class="links-card">
-          <h3>Featured In (New to Old)</h3>
+          <h3>Featured In</h3>
           <ul class="media-links">
             <li>
               <a href="https://www.hani.co.kr/arti/society/society_general/1252972.html" target="_blank">Hankyoreh: Why I Came to Korea in Search of 'Mother's Freckles’</a>
@@ -201,7 +201,7 @@
 <style>
   /* --- GLOBAL VARIABLES & RESET --- */
   :root {
-    --bg-color: #f7f4ee; /* Warm Hanji paper base */
+    --bg-color: #faf8f5; /* Off-white Hanji base tone */
     --text-main: #222;
     --text-light: #444;
     --accent: #000;
@@ -225,10 +225,10 @@
     line-height: 1.7;
     overflow-x: hidden;
     
-    /* Hanji (Traditional Korean Paper) Texture Effect */
+    /* Clean, seamless White Hanji (Mulberry Paper) texture */
     background-image: 
-      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4), transparent 85%),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.7), rgba(245, 242, 235, 0.85)),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='hanjiNoise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' result='noise'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.045 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' fill='%23faf8f5'/%3E%3Crect width='100%25' height='100%25' filter='url(%23hanjiNoise)'/%3E%3C/svg%3E");
   }
 
   /* --- HERO SECTION --- */
@@ -374,11 +374,12 @@
   }
 
   .bg-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(4px);
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    border: 1px solid #eee;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.06);
   }
 
   .eyebrow {
@@ -425,12 +426,13 @@
   }
 
   .card {
-    background: white;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(4px);
     padding: 30px;
     border-radius: 12px;
     text-decoration: none;
     color: var(--text-main);
-    border: 1px solid #eee;
+    border: 1px solid rgba(0,0,0,0.06);
     box-shadow: 0 4px 6px rgba(0,0,0,0.02);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
@@ -471,10 +473,11 @@
 
   /* --- LISTS & LINKS --- */
   .links-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(4px);
     padding: 40px;
     border-radius: 12px;
-    border: 1px solid #eee;
+    border: 1px solid rgba(0,0,0,0.06);
     text-align: left;
     max-width: 600px;
     margin: 0 auto;
@@ -515,7 +518,6 @@
     border-bottom-color: #000;
   }
 
-  /* Date Styling */
   .media-date {
     font-size: 0.85rem;
     color: #777;
