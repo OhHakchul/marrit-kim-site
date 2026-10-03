@@ -88,11 +88,6 @@
 
       <section class="center-section">
         <h2 class="section-title">Media</h2>
-        <ul class="media-links" style="margin-bottom: 50px;">
-          <li>
-              <a href="https://docs.google.com/document/d/1m590hA5yWBjf4eueOOau5xyZKbSmCyOjhy5Wx8yIwRU/edit?usp=sharing" target="_blank" style="font-size: 1.8rem;">[TRC3 Speech]</a>
-          </li>
-        </ul>
 
         <div class="grid-2">
           <a href="https://vimeo.com/958241304" target="_blank"><img src="/images/panel-dokad.png" alt="DoKAD Panel 2024" class="panel-img" /></a>
@@ -139,7 +134,7 @@
               <div class="media-date">February 10, 2025</div>
             </li>
             <li>
-              <a href="https://frieschdagblad.nl/regio/Marrits-moeizame-zoektocht-naar-waar-haar-wortels-liggen-45314003.html" target="_blank">FrieschDagblad: Marrit (30) from Drachten advocates for the right to information for descendants of adoptees: 'I was not allowed to view the files’</a> <a href="/docs/Friesch-Dagblad-Interview.pdf" target="_blank" style="font-size: 0.9em; color: #666; border: none;">[PDF]</a>
+              <a href="https://frieschdagblad.nl/regio/Marrits-moeizame-zoektocht-naar-waar-haar-wortels-liggen-45314003.html" target="_blank">FrieschDagblad: Marrit (30) from Drachten advocates for the right to information for descendants of adoptees: 'I was not allowed to view the files’</a>
               <div class="media-date">January 4, 2025</div>
             </li>
             <li>
@@ -206,14 +201,10 @@
 <style>
   /* --- GLOBAL VARIABLES & RESET --- */
   :root {
-    --bg-color: #fdfbf7;
+    --bg-color: #f7f4ee; /* Warm Hanji paper base */
     --text-main: #222;
     --text-light: #444;
     --accent: #000;
-    
-    --freckle-1: rgba(160, 82, 45, 0.15); 
-    --freckle-2: rgba(139, 69, 19, 0.1);  
-    --freckle-3: rgba(205, 133, 63, 0.12); 
   }
   
   * {
@@ -234,12 +225,10 @@
     line-height: 1.7;
     overflow-x: hidden;
     
+    /* Hanji (Traditional Korean Paper) Texture Effect */
     background-image: 
-      radial-gradient(circle, var(--freckle-1) 1px, transparent 1.5px),
-      radial-gradient(circle, var(--freckle-2) 1.5px, transparent 2px),
-      radial-gradient(circle, var(--freckle-3) 1px, transparent 1.5px);
-    background-size: 35px 35px, 55px 55px, 85px 85px;
-    background-position: 0 0, 15px 25px, 45px 65px;
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.4), transparent 85%),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
 
   /* --- HERO SECTION --- */
@@ -322,7 +311,7 @@
   .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 100px 20px 60px; /* added bottom padding */
+    padding: 100px 20px 60px;
     display: flex;
     flex-direction: column;
     gap: 120px;
@@ -374,12 +363,7 @@
   .center-section .section-title {
     margin-bottom: 50px;
   }
-  .featured-speech {
-    font-size: 1.8rem;
-    font-weight: 700;
-    display: inline-block;
-    margin-bottom: 20px;
-  }
+
   /* --- SPECIFIC ELEMENTS --- */
   .portrait {
     width: 100%;
@@ -561,7 +545,7 @@
     border-bottom: 1px solid #000;
   }
 
-/* The background overlay */
+/* Lightbox overlay */
 .lightbox {
   display: none;
   position: fixed;
@@ -574,7 +558,6 @@
   text-align: center;
 }
 
-/* Show the lightbox when the URL ends in #book-viewer */
 .lightbox:target {
   display: flex;
   align-items: center;
@@ -587,7 +570,6 @@
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-/* Clicking outside the image closes it */
 .lightbox-close {
   position: absolute;
   top: 0;
@@ -596,6 +578,7 @@
   height: 100%;
   cursor: default;
 }
+
   /* --- RESPONSIVE DESIGN FOR PHONES --- */
   @media (max-width: 768px) {
     .hero-text h1 { font-size: 2rem; }
